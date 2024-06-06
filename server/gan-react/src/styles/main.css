@@ -1,0 +1,15 @@
+html {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+button:focus {outline:0;}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

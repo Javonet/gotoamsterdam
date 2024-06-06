@@ -1,0 +1,38 @@
+# C#
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+.env
+.venv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info
+dist/
+build/
+*.log
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/dist
+/.next
+/out
+
+# General
+.DS_Store
+Thumbs.db
