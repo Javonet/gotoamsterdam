@@ -4,7 +4,12 @@ using System.Text.Json;
 
 class Robot
 {
-    public static async Task Solve(){
+    public static void Solve(){
+        var task = SolveAsync();
+        task.Wait();
+    }
+
+    public static async Task SolveAsync(){
         //Use env var?
         var ipAddress = "192.168.68.105";
         Uri serverUri = new Uri($"ws://{ipAddress}:3000");
@@ -18,7 +23,7 @@ class Robot
 
         // Receive a message from the Robot
         string messageReceived = await ReceiveMessageAsync(ws);
-        Console.WriteLine($"Message received: {messageReceived}");
+        //Console.WriteLine($"Message received: {messageReceived}");
 
         // Close the WebSocket connection
         await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", CancellationToken.None);

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "javonet-nodejs-sdk": "^2.4.3"
+  }
+}
