@@ -1,0 +1,9 @@
+Hello brave developer!
+
+You've been given a cumbersome challenge to solve a rubik's cube. A mad Architect left his secrets in that cube, and the only way to access it, is to solve it in 5 seconds. Only machine can do this but it's written in language that you don't know. Your aim is to solve it so quickly
+
+Your aim is to solve it in the quickets way.
+
+But there can be only one true Integration winner that is the fastest. Do you think it will be you?
+
+Let's find out!

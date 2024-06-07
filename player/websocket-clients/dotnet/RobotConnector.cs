@@ -2,30 +2,28 @@
 using System.Text;
 using System.Text.Json;
 
-class Program
+class Robot
 {
-    static async Task Main(string[] args)
-    {
-        Uri serverUri = new Uri("ws://localhost:3000");
+    public static async Task Solve(){
+        //Use env var?
+        var ipAddress = "192.168.68.105";
+        Uri serverUri = new Uri($"ws://{ipAddress}:3000");
 
         using var ws = new ClientWebSocket();
         await ws.ConnectAsync(serverUri, CancellationToken.None);
-        Console.WriteLine("Connected to WebSocket server at ws://localhost:3000");
+        Console.WriteLine($"Connected to Robot at {DateTime.Now}");
 
-        // Send a message to the WebSocket server
-        var messageObject = new { payload = "sendInstruction" };
-        string messageToSend = JsonSerializer.Serialize(messageObject);
-        await SendMessageAsync(ws, messageToSend);
+        // Send a message to the Robot
+        await SendMessageAsync(ws, Environment.MachineName);
 
-        // Receive a message from the WebSocket server
+        // Receive a message from the Robot
         string messageReceived = await ReceiveMessageAsync(ws);
         Console.WriteLine($"Message received: {messageReceived}");
 
         // Close the WebSocket connection
         await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", CancellationToken.None);
-        Console.WriteLine("WebSocket connection closed");
+        Console.WriteLine("Connection closed");
     }
-
     private static async Task SendMessageAsync(ClientWebSocket ws, string message)
     {
         byte[] bytesToSend = Encoding.UTF8.GetBytes(message);
@@ -33,7 +31,6 @@ class Program
         await ws.SendAsync(buffer, WebSocketMessageType.Text, true, CancellationToken.None);
         Console.WriteLine($"Message sent: {message}");
     }
-
     private static async Task<string> ReceiveMessageAsync(ClientWebSocket ws)
     {
         var buffer = new byte[1024];

@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 REM Set the base folder name and path
-set "base_folder_name=dotnet"
+set "base_folder_name=python"
 set "base_folder=%~dp0%base_folder_name%_0"
 
 REM Get the latest folder number
@@ -23,8 +23,11 @@ set "new_folder_path=%~dp0%new_folder_name%"
 REM Copy the base folder to the new folder
 xcopy "%base_folder%" "%new_folder_path%" /e /i /h /k /y
 
+REM Copy the Robot client file
+copy ..\..\websocket-clients\dotnet\bin\Debug\net8.0\RobotConnector.dll "%new_folder_path%"
+
 REM Open the new folder in Visual Studio Code
 cd "%new_folder_path%"
-code Program.cs
+code main.py
 
 endlocal
