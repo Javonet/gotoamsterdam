@@ -3,6 +3,7 @@
 [Oo]bj/
 *.exe
 *.dll
+Binaries/
 
 # Python
 __pycache__/

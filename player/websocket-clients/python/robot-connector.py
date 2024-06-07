@@ -3,18 +3,21 @@ import websockets
 from datetime import datetime
 import socket
 
-async def connect_to_websocket(ip_address: str, port: int):
-    uri = f"ws://{ip_address}:{port}"
-    async with websockets.connect(uri) as websocket:
-        hostname = socket.gethostname()
-        print(f"Connected to Robot at {datetime.now()}")
+class Robot:
+    def __init__(self):
+        pass
 
-        # Example of sending a message
-        await websocket.send(hostname)
-        print("Command sent")
+    async def connect(self, ip_address: str, port: int):
+        uri = f"ws://{ip_address}:{port}"
+        async with websockets.connect(uri) as websocket:
+            hostname = socket.gethostname()
+            print(f"Connected to Robot at {datetime.now()}")
 
-# Replace with the desired IP address and port
-ip_address = "192.168.68.105"
-port = 3000
+            # Example of sending a message
+            await websocket.send(hostname)
+            print("Command sent")
 
-asyncio.get_event_loop().run_until_complete(connect_to_websocket(ip_address, port))
+    def solve(self):
+        ip_address = "192.168.68.105"
+        port = 3000
+        asyncio.get_event_loop().run_until_complete(self.solve(ip_address, port))
