@@ -47,7 +47,7 @@ class Screen2(Frame):
             image=self.button_image_1,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("dotnet"),
             relief="flat"
         )
         self.button_1.place(
@@ -64,7 +64,7 @@ class Screen2(Frame):
             image=self.button_image_2,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("java"),
             relief="flat"
         )
         self.button_2.place(
@@ -81,7 +81,7 @@ class Screen2(Frame):
             image=self.button_image_3,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("python"),
             relief="flat"
         )
         self.button_3.place(x=356.0, y=520.0, width=263.0, height=87.0)
@@ -92,7 +92,7 @@ class Screen2(Frame):
             image=self.button_image_4,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("js"),
             relief="flat"
         )
         self.button_4.place(x=39.0, y=520.0, width=263.0, height=87.0)
@@ -103,7 +103,7 @@ class Screen2(Frame):
             image=self.button_image_5,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("ruby"),
             relief="flat"
         )
         self.button_5.place(x=982.0, y=357.0, width=263.0, height=87.0)
@@ -114,7 +114,7 @@ class Screen2(Frame):
             image=self.button_image_6,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("golang"),
             relief="flat"
         )
         self.button_6.place(x=982.0, y=520.0, width=263.0, height=87.0)
@@ -125,7 +125,7 @@ class Screen2(Frame):
             image=self.button_image_7,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("perl"),
             relief="flat"
         )
         self.button_7.place(x=673.0, y=357.0, width=263.0, height=87.0)
@@ -136,7 +136,11 @@ class Screen2(Frame):
             image=self.button_image_8,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: controller.show_frame("Screen3"),
+            command=lambda: self.set_language_and_proceed("c++"),
             relief="flat"
         )
         self.button_8.place(x=673.0, y=520.0, width=263.0, height=87.0)
+        
+    def set_language_and_proceed(self, language):
+        self.controller.selected_language = language
+        self.controller.show_frame("Screen3")

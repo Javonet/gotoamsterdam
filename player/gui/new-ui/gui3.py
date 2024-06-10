@@ -1,5 +1,7 @@
 from pathlib import Path
 from tkinter import Canvas, Frame, Button, PhotoImage
+import subprocess
+import os
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Local\GoToAmsterdam\player\gui\new-ui\assets\frame3")
@@ -67,7 +69,7 @@ class Screen3(Frame):
             image=self.button_image_1,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: print("button_1 clicked"),
+            command=self.execute_bat_script,
             relief="flat"
         )
         self.button_1.place(
@@ -94,3 +96,11 @@ class Screen3(Frame):
             width=430.0,
             height=161.0
         )
+
+    def execute_bat_script(self):
+        language = self.controller.selected_language
+        script_path = f"..\\..\\code-starters\\{language}\\{language}.bat"
+        if os.path.exists(script_path):
+            subprocess.run([script_path], shell=True)
+        else:
+            print(f"Script not found: {script_path}")
