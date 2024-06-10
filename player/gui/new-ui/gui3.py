@@ -12,7 +12,7 @@ class Screen3(Frame):
         super().__init__(parent, bg="#FFFFFF")
         self.controller = controller
 
-        canvas = Canvas(
+        self.canvas = Canvas(
             self,
             bg="#FFFFFF",
             height=832,
@@ -22,27 +22,47 @@ class Screen3(Frame):
             relief="ridge"
         )
 
-        canvas.place(x=0, y=0, width=1280, height=832)
+        #Image1
+        self.canvas.place(x=0, y=0, width=1280, height=832)
         self.image_image_1 = PhotoImage(
             file=relative_to_assets("image_1.png"))
-        canvas.create_image(
-            923.0,
-            416.0,
+        self.canvas.create_image(
+            889.0,
+            305.0,
             image=self.image_image_1
         )
 
-        canvas.create_text(
-            68.0,
-            299.0,
+        # Javonet Logo
+        self.image_image_2 = PhotoImage(
+            file=relative_to_assets("image_2.png"))
+        self.image_2 = self.canvas.create_image(
+            1170.0,
+            35.0,
+            image=self.image_image_2
+        )
+
+        self.canvas.create_text(
+            467.0,
+            66.0,
             anchor="nw",
-            text="Using your code\nconnect to \nrobot’s dll library\nand call \nRobot.Solve()",
+            text="Use Your Code",
+            fill="#002199",
+            font=("Poppins Bold", 64 * -1, "bold")
+        )
+
+        self.canvas.create_text(
+            68.0,
+            229.0,
+            anchor="nw",
+            text="Using your code connect to\nrobot’s dll library\nCall Solve static method\non a Robot class",
             fill="#000000",
             font=("Inter", 40 * -1)
         )
 
+        #Show me Javonet magic
         self.button_image_1 = PhotoImage(
             file=relative_to_assets("button_1.png"))
-        button_1 = Button(
+        self.button_1 = Button(
             self,
             image=self.button_image_1,
             borderwidth=0,
@@ -50,16 +70,17 @@ class Screen3(Frame):
             command=lambda: print("button_1 clicked"),
             relief="flat"
         )
-        button_1.place(
-            x=205.0,
-            y=640.0,
-            width=291.2352294921875,
-            height=174.161865234375
+        self.button_1.place(
+            x=215.0,
+            y=507.0,
+            width=391.0,
+            height=161.0
         )
 
+        #I'm Pro
         self.button_image_2 = PhotoImage(
             file=relative_to_assets("button_2.png"))
-        button_2 = Button(
+        self.button_2 = Button(
             self,
             image=self.button_image_2,
             borderwidth=0,
@@ -67,9 +88,9 @@ class Screen3(Frame):
             command=lambda: print("button_2 clicked"),
             relief="flat"
         )
-        button_2.place(
-            x=640.0,
-            y=640.0,
-            width=291.2352294921875,
-            height=174.161865234375
+        self.button_2.place(
+            x=700.0,
+            y=507.0,
+            width=430.0,
+            height=161.0
         )

@@ -12,7 +12,7 @@ class Screen2(Frame):
         super().__init__(parent, bg="#FFFFFF")
         self.controller = controller
 
-        canvas = Canvas(
+        self.canvas = Canvas(
             self,
             bg="#FFFFFF",
             height=832,
@@ -22,19 +22,27 @@ class Screen2(Frame):
             relief="ridge"
         )
 
-        canvas.place(x=0, y=0, width=1280, height=832)
-        canvas.create_text(
-            229.0,
-            114.0,
+        self.canvas.place(x=0, y=0, width=1280, height=832)
+        self.canvas.create_text(
+            133.0,
+            96.0,
             anchor="nw",
-            text="Third Screen Content",
-            fill="#000000",
-            font=("Inter", 64 * -1)
+            text="Choose your preferred language",
+            fill="#002199",
+            font=("Poppins Bold", 64 * -1, "bold")
+        )
+
+        self.image_image_1 = PhotoImage(
+            file=relative_to_assets("image_1.png"))
+        self.image_1 = self.canvas.create_image(
+            1170.0,
+            35.0,
+            image=self.image_image_1
         )
 
         self.button_image_1 = PhotoImage(
             file=relative_to_assets("button_1.png"))
-        button_1 = Button(
+        self.button_1 = Button(
             self,
             image=self.button_image_1,
             borderwidth=0,
@@ -42,9 +50,93 @@ class Screen2(Frame):
             command=lambda: controller.show_frame("Screen3"),
             relief="flat"
         )
-        button_1.place(
-            x=494.0,
-            y=413.0,
-            width=291.2352294921875,
-            height=77.33251953125
+        self.button_1.place(
+            x=39.0,
+            y=357.0,
+            width=263.0,
+            height=87.0
         )
+
+        self.button_image_2 = PhotoImage(
+            file=relative_to_assets("button_2.png"))
+        self.button_2 = Button(
+            self,
+            image=self.button_image_2,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: controller.show_frame("Screen3"),
+            relief="flat"
+        )
+        self.button_2.place(
+            x=356.0,
+            y=357.0,
+            width=263.0,
+            height=87.0
+        )
+
+        self.button_image_3 = PhotoImage(
+            file=relative_to_assets("button_3.png"))
+        self.button_3 = Button(
+            self,
+            image=self.button_image_3,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: controller.show_frame("Screen3"),
+            relief="flat"
+        )
+        self.button_3.place(x=356.0, y=520.0, width=263.0, height=87.0)
+
+        self.button_image_4 = PhotoImage(file=relative_to_assets("button_4.png"))
+        self.button_4 = Button(
+            self,
+            image=self.button_image_4,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: controller.show_frame("Screen3"),
+            relief="flat"
+        )
+        self.button_4.place(x=39.0, y=520.0, width=263.0, height=87.0)
+
+        self.button_image_5 = PhotoImage(file=relative_to_assets("button_5.png"))
+        self.button_5 = Button(
+            self,
+            image=self.button_image_5,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: controller.show_frame("Screen3"),
+            relief="flat"
+        )
+        self.button_5.place(x=982.0, y=357.0, width=263.0, height=87.0)
+
+        self.button_image_6 = PhotoImage(file=relative_to_assets("button_6.png"))
+        self.button_6 = Button(
+            self,
+            image=self.button_image_6,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: controller.show_frame("Screen3"),
+            relief="flat"
+        )
+        self.button_6.place(x=982.0, y=520.0, width=263.0, height=87.0)
+
+        self.button_image_7 = PhotoImage(file=relative_to_assets("button_7.png"))
+        self.button_7 = Button(
+            self,
+            image=self.button_image_7,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: controller.show_frame("Screen3"),
+            relief="flat"
+        )
+        self.button_7.place(x=673.0, y=357.0, width=263.0, height=87.0)
+
+        self.button_image_8 = PhotoImage(file=relative_to_assets("button_8.png"))
+        self.button_8 = Button(
+            self,
+            image=self.button_image_8,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: controller.show_frame("Screen3"),
+            relief="flat"
+        )
+        self.button_8.place(x=673.0, y=520.0, width=263.0, height=87.0)

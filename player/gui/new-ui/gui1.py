@@ -12,7 +12,7 @@ class Screen1(Frame):
         super().__init__(parent, bg="#FFFFFF")
         self.controller = controller
 
-        canvas = Canvas(
+        self.canvas = Canvas(
             self,
             bg="#FFFFFF",
             height=832,
@@ -21,20 +21,30 @@ class Screen1(Frame):
             highlightthickness=0,
             relief="ridge"
         )
+        self.canvas.place(x=0, y=0, width=1280, height=832)
 
-        canvas.place(x=0, y=0, width=1280, height=832)
-        canvas.create_text(
+        self.canvas.create_text(
             229.0,
-            114.0,
+            47.0,
             anchor="nw",
+            justify="center",
             text="Welcome Brave Adventurer",
-            fill="#000000",
-            font=("Inter", 64 * -1)
+            fill="#002199",
+            font=("Inter", 64 * -1, "bold")
+        )
+
+        self.canvas.create_text(
+            39.0,
+            147.0,
+            anchor="nw",
+            text="The Rubik's Cube Tower, a high-tech marvel, is in chaos after a cyber attack \nscrambled its core.\n\nAs a top IT specialist, you must use the legendary RoboSolver to fix this.\nBut there's a catch – it’s been written in a language, that you are not familiar with.\n\nArmed with Javonet, call that code to guide RoboSolver and bring the cube – and\nthe city – closer to order. The cube holds the key to the programming languages' cores.\n\nThe first to solve it unlocks this power and gets the cube.\nThe fastest of all - wins the prestigious Rubik's Cube Tower.",
+            fill="#394560",
+            font=("Poppins Regular", 32 * -1)
         )
 
         self.button_image_1 = PhotoImage(
             file=relative_to_assets("button_1.png"))
-        button_1 = Button(
+        self.button_1 = Button(
             self,
             image=self.button_image_1,
             borderwidth=0,
@@ -42,9 +52,17 @@ class Screen1(Frame):
             command=lambda: controller.show_frame("Screen2"),
             relief="flat"
         )
-        button_1.place(
-            x=494.0,
-            y=413.0,
-            width=291.2352294921875,
-            height=77.33251953125
+        self.button_1.place(
+            x=505.0,
+            y=597.0,
+            width=270.0,
+            height=82.0
+        )
+
+        self.image_image_1 = PhotoImage(
+            file=relative_to_assets("image_1.png"))
+        self.image_1 = self.canvas.create_image(
+            1170.0,
+            35.0,
+            image=self.image_image_1
         )
