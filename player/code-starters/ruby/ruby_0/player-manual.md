@@ -5,6 +5,11 @@ There is a static method `solve` that is in the `Robot` class in `robot-connecto
 
 You license key is: "p5XB-z7MN-Tp9a-d3NH-y4GA"
 
+### Add require for Javonet
+```
+require 'javonet-ruby-sdk'
+```
+
 ### Install Javonet NodeJs package
 ```ruby
 gem install javonet-ruby-sdk
@@ -66,21 +71,21 @@ You now need to get that Class from loaded module
   ### Code
   ```ruby
   class_name = 'robot-connector.Robot'
-  called_runtime_type = called_runtime.get_type(class_name).execute
+  robotClass = called_runtime.get_type(class_name).execute
   ```
 </details>
 
 ### Invoke Solve Method
 
   ```ruby
-  called_runtime_type.invoke_static_method(methodName).execute
+  robotClass.invoke_static_method(methodName).execute
   ```
 <details>
   <summary>Help me</summary>
   
   ### Code
   ```ruby
-  called_runtime_type.invoke_static_method('solve').execute
+  robotClass.invoke_static_method('solve').execute
   ```
 </details>
 
@@ -92,6 +97,6 @@ You now need to get that Class from loaded module
   
   ### Code
   ```bash
-  ruby ./main.pl
+  ruby ./main.rb
   ```
 </details>
