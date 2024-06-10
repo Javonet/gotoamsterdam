@@ -9,7 +9,7 @@ class App(Tk):
     def __init__(self):
         super().__init__()
         self.title("Javonet - Speed of Integration")
-        #self.attributes("-fullscreen", True)
+        self.attributes("-fullscreen", True)
         self.geometry("1920x1080")
         self.configure(bg="#AAAAAA")
         self.frames = {}

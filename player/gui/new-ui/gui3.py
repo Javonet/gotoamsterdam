@@ -4,7 +4,7 @@ import subprocess
 import os
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Local\GoToAmsterdam\player\gui\new-ui\assets\frame3")
+ASSETS_PATH = OUTPUT_PATH / Path(r"assets\frame3")
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
