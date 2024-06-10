@@ -7,7 +7,7 @@ You license key is: "p5XB-z7MN-Tp9a-d3NH-y4GA"
 
 ### Install Javonet NodeJs package
 ```java
-npm i javonet-nodejs-sdk
+mvn dependency:get -Dartifact='com.javonet:javonet-java-sdk:2.4.3'
 ```
 
 ### Javonet license key activation
