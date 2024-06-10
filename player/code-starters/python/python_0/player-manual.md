@@ -6,7 +6,7 @@ You license key is: "p5XB-z7MN-Tp9a-d3NH-y4GA"
 
 ### Add Javonet Nuget package
 ```python
-pip install javonet-python-sdk
+python -m pip install javonet-python-sdk
 ```
 
 ### Javonet license key activation
@@ -78,6 +78,6 @@ You now need to get that Class from loaded module
   
   ### Code
   ```python
-  called_runtime_type.invoke_static_method("solve").execute()
+  called_runtime_type.invoke_static_method("Solve").execute()
   ```
 </details>
