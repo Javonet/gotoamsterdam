@@ -63,11 +63,11 @@ You can load a custom library by calling:
 ### Access Robot Class
 You now need to get that Class from loaded module
   ```c#
-  var calledRuntimeType = calledRuntime.GetType(className).Execute();
+  var calledRuntimeType = calledRuntime.GetType("Robot").Execute();
   ```
 
 ### Invoke Solve Method
 
   ```c#
-  var response = calledRuntimeType.InvokeStaticMethod(methodName).Execute();
+  var response = calledRuntimeType.InvokeStaticMethod("solve").Execute();
   ```

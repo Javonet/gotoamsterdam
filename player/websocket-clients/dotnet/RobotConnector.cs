@@ -11,7 +11,7 @@ class Robot
 
     public static async Task SolveAsync(){
         //Use env var?
-        var ipAddress = "192.168.68.105";
+        var ipAddress = "192.168.0.151";
         Uri serverUri = new Uri($"ws://{ipAddress}:3000");
 
         using var ws = new ClientWebSocket();

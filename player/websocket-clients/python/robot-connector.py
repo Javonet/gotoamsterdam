@@ -19,7 +19,7 @@ class Robot:
 
     @staticmethod
     def solve():
-        ip_address = "192.168.68.105"
+        ip_address = "192.168.0.151"
         port = 3000
         robot = Robot()
         asyncio.get_event_loop().run_until_complete(robot.connect(ip_address, port))
