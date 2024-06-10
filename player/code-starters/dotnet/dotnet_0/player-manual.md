@@ -47,7 +47,7 @@ Javonet.InMemory().Python();
 ### Load python module to your app
 You can load a custom library by calling:
   ```c#
-  calledRuntime.LoadLibrary(libraryPath);
+  calledRuntime.LoadLibrary(pythonModuleFolder);
   ```
 
 <details>
@@ -55,15 +55,14 @@ You can load a custom library by calling:
   
   ### Code
   ```c#
-  var libraryPath = "./robot-connector.py";
-  calledRuntime.LoadLibrary(libraryPath);
+  calledRuntime.LoadLibrary("PythonRobotModule");
   ```
 </details>
 
 ### Access Robot Class
 You now need to get that Class from loaded module
   ```c#
-  var calledRuntimeType = calledRuntime.GetType("Robot").Execute();
+  var calledRuntimeType = calledRuntime.GetType("robot-connector.Robot").Execute();
   ```
 
 ### Invoke Solve Method
