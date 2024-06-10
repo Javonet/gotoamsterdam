@@ -28,6 +28,6 @@ copy ..\..\websocket-clients\python\robot-connector.py "%new_folder_path%"
 
 REM Open the new folder in Visual Studio Code
 cd "%new_folder_path%"
-code Program.cs
+code .
 
 endlocal

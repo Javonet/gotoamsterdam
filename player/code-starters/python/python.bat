@@ -28,6 +28,6 @@ copy ..\..\websocket-clients\dotnet\bin\Debug\net8.0\RobotConnector.dll "%new_fo
 
 REM Open the new folder in Visual Studio Code
 cd "%new_folder_path%"
-code main.py
+code .
 
 endlocal
