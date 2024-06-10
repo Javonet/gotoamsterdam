@@ -3,6 +3,7 @@ from gui0 import Screen0
 from gui1 import Screen1
 from gui2 import Screen2
 from gui3 import Screen3
+from gui3_python import Screen3Python
 
 class App(Tk):
     def __init__(self):
@@ -12,8 +13,9 @@ class App(Tk):
         self.geometry("1920x1080")
         self.configure(bg="#AAAAAA")
         self.frames = {}
+        self.selected_language = "default" 
         
-        for F in (Screen0, Screen1, Screen2, Screen3):
+        for F in (Screen0, Screen1, Screen2, Screen3, Screen3Python):
             page_name = F.__name__
             frame = F(parent=self, controller=self)
             self.frames[page_name] = frame

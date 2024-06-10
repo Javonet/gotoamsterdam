@@ -9,7 +9,7 @@ ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Local\GoToAmsterdam\player\gui\new-ui\asse
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
-class Screen3(Frame):
+class Screen3Python(Frame):
     def __init__(self, parent, controller):
         super().__init__(parent, bg="#FFFFFF")
         self.controller = controller
@@ -26,6 +26,7 @@ class Screen3(Frame):
 
         #Image1
         self.canvas.place(x=0, y=0, width=1280, height=832)
+        print(self.controller.selected_language)
         self.image_image_1 = PhotoImage(file=relative_to_assets("image_1_dll.png"))
         
         self.canvas.create_image(
@@ -87,7 +88,7 @@ class Screen3(Frame):
             image=self.button_image_2,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: self.execute_pro_script(),
+            command=lambda: self.execute_pro_python_script(),
             relief="flat"
         )
         self.button_2.place(
@@ -105,8 +106,8 @@ class Screen3(Frame):
         else:
             print(f"Script not found: {script_path}")
 
-    def execute_pro_script(self):
-        script_path = f"..\\..\\code-starters\\pro\\pro.bat"
+    def execute_pro_python_script(self):
+        script_path = f"..\\..\\code-starters\\propython\\propython.bat"
         if os.path.exists(script_path):
             subprocess.run([script_path], shell=True)
         else:

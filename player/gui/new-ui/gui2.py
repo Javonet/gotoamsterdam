@@ -143,4 +143,7 @@ class Screen2(Frame):
         
     def set_language_and_proceed(self, language):
         self.controller.selected_language = language
-        self.controller.show_frame("Screen3")
+        if language == "python":
+            self.controller.show_frame("Screen3Python")
+        else:
+            self.controller.show_frame("Screen3")
