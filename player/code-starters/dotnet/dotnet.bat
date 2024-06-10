@@ -24,7 +24,7 @@ REM Copy the base folder to the new folder
 xcopy "%base_folder%" "%new_folder_path%" /e /i /h /k /y
 
 REM Copy the Robot client file
-copy ..\..\websocket-clients\python\robot-connector.py "%new_folder_path%"
+copy ..\..\websocket-clients\python\robot-connector.py "%new_folder_path%\PythonRobotModule\"
 
 REM Open the new folder in Visual Studio Code
 cd "%new_folder_path%"

@@ -7,4 +7,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <Copy SourceFiles="PythonRobotModule\robot-connector.py" DestinationFolder="$(OutDir)\PythonRobotModule" />
+  </Target>
 </Project>
