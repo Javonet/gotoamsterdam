@@ -66,7 +66,7 @@ You can load a custom library by calling:
 ### Access Robot Class
 You now need to get that Class from loaded module
   ```java
-  const className = "FileName.ClassName"
+  String className = "FileName.ClassName"
   pythonRuntime.get_type(class_name).execute()
   ```
 <details>
@@ -75,14 +75,14 @@ You now need to get that Class from loaded module
   ### Code
   ```java
   String className = "robot-connector.Robot";
-  InvocationContext calledRuntimeType = pythonRuntime.getType(className).execute();
+  InvocationContext pythonRuntimeType = pythonRuntime.getType(className).execute();
   ```
 </details>
 
 ### Invoke Solve Method
 
   ```java
-  calledRuntimeType.invokeStaticMethod(methodName).execute();
+  pythonRuntimeType.invokeStaticMethod(methodName).execute();
   ```
 <details>
   <summary>Help me</summary>
