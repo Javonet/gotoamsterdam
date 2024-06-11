@@ -25,59 +25,42 @@ from javonet.sdk import Javonet
 In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
-```python
-Javonet.in_memory().netcore()
-```
 
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```python
   netcore_runtime = Javonet.in_memory().netcore()
   ```
-</details>
+
 
 ### Load python module to your app
 You can load a custom library by calling:
-  ```python
-  called_runtime.load_library(library_path)
-  ```
-
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```python
   library_path = "./RobotConnector.dll"
   called_runtime.load_library(library_path)
   ```
-</details>
+
 
 ### Access Robot Class
 You now need to get that Class from loaded module
-  ```python
-  called_runtime.get_type(class_name).execute()
-  ```
-  <details>
-  <summary>Help me</summary>
   
   ### Code
   ```python
   called_runtime_type = called_runtime.get_type("Robot").execute()
   ```
-</details>
 
 ### Invoke Solve Method
 
-  ```python
-  called_runtime_type.invoke_static_method(method_name).execute()
-  ```
-    <details>
-  <summary>Help me</summary>
   
   ### Code
   ```python
   called_runtime_type.invoke_static_method("Solve").execute()
   ```
-</details>
+### Run python code
+
+  ### Code
+  ```bash
+    python main.py
+  ```

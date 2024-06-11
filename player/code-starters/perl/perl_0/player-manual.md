@@ -26,72 +26,40 @@ use aliased 'Javonet::Javonet' => 'Javonet';
 In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
-```perl
-Javonet->in_memory()->python();
-```
-
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```perl
   my $python_runtime = Javonet->in_memory()->python();
   ```
-</details>
+
 
 ### Load python module to your app
 You can load a custom library by calling:
-  ```perl
-  $python_runtime->load_library($library_path);
-  ```
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```perl
   $python_runtime->load_library(".");
   ```
-</details>
+
 
 ### Access Robot Class
 You now need to get that Class from loaded module
-  ```perl
-  my $class_name = "robot-connector.Robot";
-  $python_runtime->get_type($class_name)->execute();
-  ```
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```perl
   my $class_name = "robot-connector.Robot";
   my $python_type = $python_runtime->get_type($class_name)->execute();
   ```
-</details>
 
 ### Invoke Solve Method
-
-  ```perl
-  $python_type->invoke_static_method(methodName)->execute();
-  ```
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```perl
   $python_type->invoke_static_method("solve")->execute();
   ```
-</details>
 
 ### Run your perl code from Terminal
 
-
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```bash
   perl ./main.pl
   ```
-</details>

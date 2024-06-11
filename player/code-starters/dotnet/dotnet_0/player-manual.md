@@ -23,33 +23,19 @@ Javonet.Netcore.Sdk.Javonet.Activate("p5XB-z7MN-Tp9a-d3NH-y4GA");
 In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
-```c#
-Javonet.Netcore.Sdk.Javonet.InMemory().Python();
-```
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```c#
   var calledRuntime = Javonet.Netcore.Sdk.Javonet.InMemory().Python();
   ```
-</details>
 
 ### Load python module to your app
 You can load a custom library by calling:
-  ```c#
-  calledRuntime.LoadLibrary(pythonModuleFolder);
-  ```
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```c#
   calledRuntime.LoadLibrary("PythonRobotModule");
   ```
-</details>
 
 ### Access Robot Class
 You now need to get that Class from loaded module

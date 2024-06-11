@@ -35,12 +35,6 @@ import com.javonet.sdk.*;
 In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
-```java
-Javonet.inMemory().python();
-```
-
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```java
@@ -50,57 +44,36 @@ Javonet.inMemory().python();
 
 ### Load python module to your app
 You can load a custom library by calling:
-  ```java
-  pythonRuntime.loadLibrary(resourceDirectory)
-  ```
-
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```java
   pythonRuntime.loadLibrary(".");
   ```
-</details>
+
 
 ### Access Robot Class
 You now need to get that Class from loaded module
-  ```java
-  String className = "FileName.ClassName"
-  pythonRuntime.get_type(class_name).execute()
-  ```
-<details>
-  <summary>Help me</summary>
-  
+
   ### Code
   ```java
   String className = "robot-connector.Robot";
   InvocationContext pythonRuntimeType = pythonRuntime.getType(className).execute();
   ```
-</details>
+
 
 ### Invoke Solve Method
 
-  ```java
-  pythonRuntimeType.invokeStaticMethod(methodName).execute();
-  ```
-<details>
-  <summary>Help me</summary>
-  
+
   ### Code
   ```java
   pythonRuntimeType.invokeStaticMethod("solve").execute();
   ```
-</details>
+
 
 ### Run your Java code from Terminal
 
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```bash
   mvn exec:java
   ```
-</details>

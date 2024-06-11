@@ -26,72 +26,42 @@ Javonet.ActivateWithCredentials("p5XB-z7MN-Tp9a-d3NH-y4GA")
 In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
-```go
-Javonet.InMemory().Python()
-```
-
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```go
   calledRuntime, _ := Javonet.InMemory().Python()
   ```
-</details>
+
 
 ### Load python module to your app
 You can load a custom library by calling:
-  ```go
-  calledRuntime.LoadLibrary(libraryPath)
-  ```
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```go
   alledRuntime.LoadLibrary(".")
   ```
-</details>
 
 ### Access Robot Class
 You now need to get that Class from loaded module
-  ```go
-  auto className = "TestClass.TestClass";
-  calledRuntime->GetType(className)->Execute();
-  ```
-<details>
-  <summary>Help me</summary>
-  
+
   ### Code
   ```go
   className := "Robot.Robot"
   calledRuntimeType, _ := calledRuntime.GetType(className).Execute()
   ```
-</details>
 
 ### Invoke Solve Method
 
-  ```go
-  calledRuntimeType.InvokeStaticMethod(methodName).Execute()
-  ```
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```go
   calledRuntimeType.InvokeStaticMethod("solve").Execute()
   ```
-</details>
+
 
 ### Run your go code from Terminal
 
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```bash
   go ./main.pl
   ```
-</details>

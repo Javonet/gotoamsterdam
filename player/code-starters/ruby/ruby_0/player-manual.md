@@ -31,72 +31,38 @@ Javonet.activate('p5XB-z7MN-Tp9a-d3NH-y4GA')
 In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
-```ruby
-Javonet.in_memory.python
-```
-
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```ruby
   called_runtime = Javonet.in_memory.python
   ```
-</details>
 
 ### Load python module to your app
 You can load a custom library by calling:
-  ```ruby
-  called_runtime.load_library(library_path)
-  ```
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```ruby
   called_runtime.load_library(".")
   ```
-</details>
 
 ### Access Robot Class
 You now need to get that Class from loaded module
-  ```ruby
-  class_name = 'FileName.ClassName'
-  called_runtime.get_type(class_name).execute
-  ```
-<details>
-  <summary>Help me</summary>
-  
+
   ### Code
   ```ruby
   class_name = 'robot-connector.Robot'
   robotClass = called_runtime.get_type(class_name).execute
   ```
-</details>
 
 ### Invoke Solve Method
 
-  ```ruby
-  robotClass.invoke_static_method(methodName).execute
-  ```
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```ruby
   robotClass.invoke_static_method('solve').execute
   ```
-</details>
 
 ### Run your ruby code from Terminal
 
-
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```bash
   ruby ./main.rb
   ```
-</details>

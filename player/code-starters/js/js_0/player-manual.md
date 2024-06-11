@@ -25,64 +25,40 @@ const { Javonet } = require('javonet-nodejs-sdk/lib/sdk/Javonet')
 In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
-```javascript
-Javonet.inMemory().python()
-```
-
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```javascript
   let pythonRuntime = Javonet.inMemory().python()
   ```
-</details>
+
 
 ### Load python module to your app
 You can load a custom library by calling:
-  ```javascript
-  pythonRuntime.loadLibrary(resourceDirectory)
-  ```
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```javascript
   resourceDirectory = "./"
   pythonRuntime.loadLibrary(resourceDirectory)
   ```
-</details>
+
   
   ### Code
   ```javascript
   const className = "robot-connector.Robot"
   let robotClass = calledRuntime.getType(className).execute()
   ```
-</details>
+
 
 ### Invoke Solve Method
 
-  ```javascript
-  robotClass.invoke_static_method(method_name).execute()
-  ```
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```javascript
   robotClass.invoke_static_method("solve").execute()
   ```
-</details>
 
 ### Run your JavaScript code from Terminal
 
 
-<details>
-  <summary>Help me</summary>
-  
   ### Code
   ```bash
   node ./app.js
   ```
-</details>
