@@ -41,7 +41,7 @@ Javonet.inMemory().python()
 ### Load python module to your app
 You can load a custom library by calling:
   ```javascript
-  calledRuntime.loadLibrary(resourceDirectory)
+  pythonRuntime.loadLibrary(resourceDirectory)
   ```
 
 <details>
@@ -50,37 +50,28 @@ You can load a custom library by calling:
   ### Code
   ```javascript
   resourceDirectory = "./"
-  calledRuntime.loadLibrary(resourceDirectory)
+  pythonRuntime.loadLibrary(resourceDirectory)
   ```
 </details>
-
-### Access Robot Class
-You now need to get that Class from loaded module
-  ```javascript
-  const className = "FileName.ClassName"
-  called_runtime.get_type(class_name).execute()
-  ```
-<details>
-  <summary>Help me</summary>
   
   ### Code
   ```javascript
   const className = "robot-connector.Robot"
-  let calledRuntimeType = calledRuntime.getType(className).execute()
+  let robotClass = calledRuntime.getType(className).execute()
   ```
 </details>
 
 ### Invoke Solve Method
 
   ```javascript
-  called_runtime_type.invoke_static_method(method_name).execute()
+  robotClass.invoke_static_method(method_name).execute()
   ```
 <details>
   <summary>Help me</summary>
   
   ### Code
   ```javascript
-  called_runtime_type.invoke_static_method("solve").execute()
+  robotClass.invoke_static_method("solve").execute()
   ```
 </details>
 

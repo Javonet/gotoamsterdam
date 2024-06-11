@@ -16,15 +16,7 @@ dotnet add package Javonet.Clr.Sdk -s https://api.nuget.org/v3/index.json
 Javonet needs to be activated first. Activation must be called only once at the start-up of an application.
 
 ```c#
-Javonet.Activate("your-license-key");
-```
-
-### Javonet needs to be imported as any other dependency.
-```c#
-using Javonet.Netcore.Sdk; 
-
-//or for .NET Framework applications 
-using Javonet.Clr.Sdk for .NET Framework apps
+Javonet.Netcore.Sdk.Javonet.Activate("your-license-key");
 ```
 
 ### Creating Python context
@@ -32,7 +24,7 @@ In order to run Python modules, we need to create it's context.
 You can do that by invoking this in memory (*Tip: we also offer remote connections!)
 
 ```c#
-Javonet.InMemory().Python();
+Javonet.Netcore.Sdk.Javonet.InMemory().Python();
 ```
 
 <details>
@@ -40,7 +32,7 @@ Javonet.InMemory().Python();
   
   ### Code
   ```c#
-  var calledRuntime = Javonet.InMemory().Python();
+  var calledRuntime = Javonet.Netcore.Sdk.Javonet.InMemory().Python();
   ```
 </details>
 

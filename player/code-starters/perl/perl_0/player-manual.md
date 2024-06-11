@@ -57,7 +57,7 @@ You can load a custom library by calling:
 ### Access Robot Class
 You now need to get that Class from loaded module
   ```perl
-  my $class_name = "FileName.ClassName";
+  my $class_name = "robot-connector.Robot";
   $python_runtime->get_type($class_name)->execute();
   ```
 <details>
