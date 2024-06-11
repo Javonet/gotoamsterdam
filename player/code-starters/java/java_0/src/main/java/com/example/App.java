@@ -1,17 +1,10 @@
 package com.example;
+//Add import for Javonet here:
 
-/**
- * Hello world!
- */
 public final class App {
-    private App() {
-    }
-
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        //Let's play a game!
+        System.out.println("Lets solve rubik's cube!");
+        // Let's play a game!
+        // Paste Javonet code here:
     }
 }
