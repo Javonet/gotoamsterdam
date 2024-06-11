@@ -23,7 +23,7 @@ mvn clean install
 Javonet needs to be activated first. Activation must be called only once at the start-up of an application.
 
 ```java
-Javonet.activate("your-license-key");
+Javonet.activate("p5XB-z7MN-Tp9a-d3NH-y4GA");
 ```
 
 ### Javonet needs to be imported as any other dependency.

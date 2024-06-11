@@ -19,7 +19,7 @@ gem install javonet-cpp-sdk
 Javonet needs to be activated first. Activation must be called only once at the start-up of an application.
 
 ```cpp
-Javonet::Activate("your-license-key");
+Javonet::Activate("p5XB-z7MN-Tp9a-d3NH-y4GA");
 ```
 
 ### Creating Python context

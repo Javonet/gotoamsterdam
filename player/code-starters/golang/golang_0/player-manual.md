@@ -19,7 +19,7 @@ import Javonet "javonet.com/javonet"
 Javonet needs to be activated first. Activation must be called only once at the start-up of an application.
 
 ```go
-Javonet.ActivateWithCredentials("your-license-key")
+Javonet.ActivateWithCredentials("p5XB-z7MN-Tp9a-d3NH-y4GA")
 ```
 
 ### Creating Python context

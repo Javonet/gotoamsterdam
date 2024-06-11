@@ -16,7 +16,7 @@ dotnet add package Javonet.Clr.Sdk -s https://api.nuget.org/v3/index.json
 Javonet needs to be activated first. Activation must be called only once at the start-up of an application.
 
 ```c#
-Javonet.Netcore.Sdk.Javonet.Activate("your-license-key");
+Javonet.Netcore.Sdk.Javonet.Activate("p5XB-z7MN-Tp9a-d3NH-y4GA");
 ```
 
 ### Creating Python context
