@@ -37,7 +37,7 @@ class Screen1(Frame):
             39.0,
             147.0,
             anchor="nw",
-            text="In a cyber-attacked Rubik's Cube Tower, you're the IT expert tasked with fixing the scrambled core using the RoboSolver. \\n However, the challenge is to do it using foreign technology module. \\n Thankfully you can do it with Javonet, unlock the cube’s power, and win the prestigious and uniqueJavonet Cube.",
+            text="In a cyber-attacked Rubik's Cube Tower, you're the IT expert tasked with fixing the scrambled core using the RoboSolver. \n\n However, the challenge is to do it using foreign technology module. \n\n Thankfully you can do it with Javonet, unlock the cube’s power, and win the prestigious and uniqueJavonet Cube.",
             fill="#394560",
             font=("Poppins Regular", 32 * -1)
         )
