@@ -5,9 +5,18 @@ There is a static method `solve` that is in the `Robot` class in `robot-connecto
 
 You license key is: "p5XB-z7MN-Tp9a-d3NH-y4GA"
 
-### Install Javonet NodeJs package
+### Install Javonet Java package in project pom.xml
 ```java
-mvn dependency:get -Dartifact='com.javonet:javonet-java-sdk:2.4.3'
+<dependency>
+    <groupId>com.javonet</groupId>
+    <artifactId>javonet-java-sdk</artifactId>
+    <version>2.4.3</version>
+</dependency>
+```
+
+Then run in terminal
+```
+mvn clean install
 ```
 
 ### Javonet license key activation
@@ -42,7 +51,7 @@ Javonet.inMemory().python();
 ### Load python module to your app
 You can load a custom library by calling:
   ```java
-  calledRuntime.loadLibrary(resourceDirectory)
+  pythonRuntime.loadLibrary(resourceDirectory)
   ```
 
 <details>
@@ -50,7 +59,7 @@ You can load a custom library by calling:
   
   ### Code
   ```java
-  calledRuntime.loadLibrary(".");
+  pythonRuntime.loadLibrary(".");
   ```
 </details>
 
@@ -58,15 +67,15 @@ You can load a custom library by calling:
 You now need to get that Class from loaded module
   ```java
   const className = "FileName.ClassName"
-  called_runtime.get_type(class_name).execute()
+  pythonRuntime.get_type(class_name).execute()
   ```
 <details>
   <summary>Help me</summary>
   
   ### Code
   ```java
-  const className = "robot-connector.Robot"
-  InvocationContext calledRuntimeType = calledRuntime.getType(className).execute();
+  String className = "robot-connector.Robot";
+  InvocationContext calledRuntimeType = pythonRuntime.getType(className).execute();
   ```
 </details>
 
@@ -80,7 +89,7 @@ You now need to get that Class from loaded module
   
   ### Code
   ```java
-  calledRuntimeType.invokeStaticMethod("solve").execute();
+  pythonRuntimeType.invokeStaticMethod("solve").execute();
   ```
 </details>
 
@@ -92,6 +101,6 @@ You now need to get that Class from loaded module
   
   ### Code
   ```bash
-  java ./Main.java
+  mvn exec:java
   ```
 </details>
