@@ -114,7 +114,7 @@ class Screen2(Frame):
             image=self.button_image_6,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: self.set_language_and_proceed("golang"),
+            command=lambda: self.set_language_and_proceed("go"),
             relief="flat"
         )
         self.button_6.place(x=982.0, y=520.0, width=263.0, height=87.0)

@@ -37,7 +37,7 @@ class Screen1(Frame):
             39.0,
             147.0,
             anchor="nw",
-            text="The Rubik's Cube Tower, a high-tech marvel, is in chaos after a cyber attack \nscrambled its core.\n\nAs a top IT specialist, you must use the legendary RoboSolver to fix this.\nBut there's a catch – it’s been written in a language, that you are not familiar with.\n\nArmed with Javonet, call that code to guide RoboSolver and bring the cube – and\nthe city – closer to order. The cube holds the key to the programming languages' cores.\n\nThe first to solve it unlocks this power and gets the cube.\nThe fastest of all - wins the prestigious Rubik's Cube Tower.",
+            text="In a cyber-attacked Rubik's Cube Tower, you're the IT expert tasked with fixing the scrambled core using the RoboSolver. However, the challenge is to do it using foreign technology module. Thankfully you can do it with Javonet, unlock the cube’s power, and win the prestigious and unique Javonet Cube.",
             fill="#394560",
             font=("Poppins Regular", 32 * -1)
         )
