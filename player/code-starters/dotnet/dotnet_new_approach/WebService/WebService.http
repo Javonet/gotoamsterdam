@@ -1,0 +1,6 @@
+@WebService_HostAddress = http://localhost:5229
+
+GET {{WebService_HostAddress}}/compute/
+Accept: application/json
+
+###
